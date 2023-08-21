@@ -1,0 +1,15 @@
+<mat-nav-list class="v-drawer">
+  <div class="title">
+    <h2 class="font-bold">Basic App</h2>
+  </div>
+
+  <a *ngFor="let item of items"
+    mat-list-item
+    class="item-menu"
+    routerLinkActive="active"
+    (click)="handleLinkTo(item.path)"
+  >
+    <mat-icon matListItemIcon class="item-icon">{{item.icon}}</mat-icon>
+    <strong matListItemLine class="item-text">{{item.title}}</strong>
+  </a>
+</mat-nav-list>

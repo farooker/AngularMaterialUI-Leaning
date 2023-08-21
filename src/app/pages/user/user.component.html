@@ -1,0 +1,70 @@
+<section class="v-user x-container-fluid">
+  <h1>User mangement</h1>
+    <div class="x-row">
+      <div class="x-col-xs-12 x-col-sm-3">
+        <label>เลขบัตรประชาชน</label>
+      </div>
+      <div class="x-col-xs-12 x-col-sm-3">
+        <label>เลขบัตรประชาชน</label>
+      </div>
+      <div class="x-col-xs-12 x-col-sm-6">
+        <button mat-raised-button color="warn" class="rounded_pill">
+          <mat-icon>add_circle</mat-icon>
+          Icon Text
+      </button>
+      </div>
+    </div>
+    <!-- <mat-form-field appearance="outline" class="dense-form-field">
+      <input matInput placeholder="_-____-_____-__-_" type="text" formControlName="IDCardNumber" class="dense-input">
+  </mat-form-field> -->
+  <mat-card class="elevation-1" style="padding: 0;">
+    <mat-card-header>
+      <mat-card-title class="font-family-Quicksand">Card with Table farook</mat-card-title>
+      <mat-card-subtitle class="font-family-Quicksand">Card with Table</mat-card-subtitle>
+    </mat-card-header>
+      <table mat-table [dataSource]="dataSource" class="demo-table">
+        <ng-container matColumnDef="position">
+          <th mat-header-cell *matHeaderCellDef class="font-family-Quicksand font-bold"> No. </th>
+          <td mat-cell *matCellDef="let element" class="font-family-Quicksand"> {{element.position}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef class="font-family-Quicksand font-bold"> Name </th>
+          <td mat-cell *matCellDef="let element" class="font-family-Quicksand">
+            <div class="button-content">
+              <img src="./assets/user.jpg" alt="Button Icon" class="avatar-prefix">
+              <span class="button-text">{{element.name}}</span>
+            </div>
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="weight">
+          <th mat-header-cell *matHeaderCellDef class="font-family-Quicksand font-bold"> Weight </th>
+          <td mat-cell *matCellDef="let element" class="font-family-Quicksand"> {{element.weight}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="symbol">
+          <th mat-header-cell *matHeaderCellDef class="font-family-Quicksand font-bold"> Symbol </th>
+          <td mat-cell *matCellDef="let element" class="font-family-Quicksand"> {{element.symbol}} </td>
+        </ng-container>
+        <ng-container matColumnDef="actions">
+          <th mat-header-cell *matHeaderCellDef class="font-family-Quicksand font-bold">Actions</th>
+          <td mat-cell *matCellDef="let element">
+                <button mat-icon-button
+                matTooltip="Modify"
+                matTooltipPosition="below"
+                >
+                <mat-icon>edit</mat-icon>
+            </button>
+                <button mat-icon-button
+                matTooltip="Remove"
+                matTooltipPosition="below"
+                color="warn">
+                <mat-icon>delete</mat-icon>
+            </button>
+          </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+  </mat-card>
+</section>
