@@ -1,11 +1,6 @@
 import { Component } from '@angular/core';
-import { Store } from '@ngrx/store';
-import * as actions  from '../../store/actions';
-import { setTitle } from '../../store/action/app.actions';
-import { selectTitle } from '../../store/selectors/app.selectors';
-import { selectCounter } from '../../store/selectors';
 // import { AppState } from '../../store/reducers'
-import { Observable } from 'rxjs';
+
 
 export interface PeriodicElement {
   name: string;

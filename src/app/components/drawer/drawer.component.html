@@ -7,9 +7,18 @@
     mat-list-item
     class="item-menu"
     routerLinkActive="active"
-    (click)="handleLinkTo(item.path)"
+    [routerLink]="item.path"
   >
-    <mat-icon matListItemIcon class="item-icon">{{item.icon}}</mat-icon>
-    <strong matListItemLine class="item-text">{{item.title}}</strong>
+    <mat-icon matListItemIcon class="item-icon" [ngClass]="{'active': isActive(item.path)}">{{item.icon}}</mat-icon>
+    <strong matListItemLine class="item-text font-family-Quicksand" [ngClass]="{'active': isActive(item.path)}">{{item.title}}</strong>
   </a>
+
 </mat-nav-list>
+  <!-- <ul class="nav">
+    <li routerLinkActive="active" *ngFor="let menuItem of items" class="nav-item">
+        <a class="nav-link" [routerLink]="[menuItem.path]">
+            <i class="material-icons">{{menuItem.icon}}</i>
+            <p>{{menuItem.title}}</p>
+        </a>
+    </li>
+</ul> -->

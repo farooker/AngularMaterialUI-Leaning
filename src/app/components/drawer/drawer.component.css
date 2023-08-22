@@ -3,19 +3,26 @@
 }
 .v-drawer .title h2{
    margin-left: 17px;
-   font-size: large;
 }
-.v-drawer .item-menu{
-  border-radius: 5px;
-  height: 45px;
+.v-drawer .item-text{
+  font-size: 14px;
 }
-/* .v-drawer .item-menu:active{
-  background-color: #B2E0EE;
-} */
-/* .drawer .item-icon{
-  margin-top: 50px;
+
+.v-drawer  .item-menu {
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  height: 50px;
+  transition: background-color 0.3s
+
 }
-.drawer .item-text{
-   margin-left: 10px;
-   vertical-align: middle;
-} */
+
+.v-drawer .item-menu.active {
+  background-color:   #F44336;
+
+}
+
+.v-drawer .item-menu.active .item-icon,
+.v-drawer .item-menu.active .item-text {
+  color: #FFFFFF;
+}
